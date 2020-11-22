@@ -7,7 +7,7 @@ and open the template in the editor.
 <html>
     <head>
         <meta charset="UTF-8">
-        <title></title>
+        <title>The Brave Hero</title>
     </head>
     <body>
         <h1>The Brave Hero</h1>
@@ -30,14 +30,14 @@ and open the template in the editor.
 
 abstract class Jucator
 {
-  public $name;
-  public $viata;
-  public $putere;
-  public $aparare;
-  public $viteza;
-  public $noroc;
-
-  
+  public 
+   $name,
+   $viata,
+   $putere,
+   $aparare,
+   $viteza,
+   $noroc;
+    
   public $runde;
   public $recorder;
   
@@ -103,7 +103,7 @@ class Game extends Jucator
         $damage=0;
     }
     elseif ($damage > 100) {
-    $damage = 100;
+        $damage = 100;
     } else {
       $this->viata -= $damage;
     }
@@ -142,7 +142,7 @@ class PadureaFermecata
     }
     
     if ($j1->esteInViata() && $j2->esteInViata()){
-    gameRecorder::get()->record('La egalitate');
+    gameRecorder::get()->record('La egalitate!');
     }elseif ($j1->esteInViata())
     {
     gameRecorder::get()->record($j1->name . ' a castigat!<br />');
